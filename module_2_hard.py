@@ -1,13 +1,29 @@
 import random
 
-first_field = random.randint(3, 20)
-print(first_field)
+first_field = 20
 second_field = []
 
 for i in range(1, first_field):
-    for j in range(1, first_field):
-        if i == j:
-            continue
-        elif (i + j) != 0 and first_field % (i + j) == 0:
-            second_field.append([i, j])
-print(second_field)
+    for j in range(1, i):
+        if first_field % (i + j) == 0:
+            second_field.append([j, i])
+print(f"{first_field} - {second_field}")
+
+# 3 - 12
+# 4 - 13
+# 5 - 14 23
+# 6 - 12 15 24
+# 7 - 16 25 34
+# 8 - 13 17 26 35
+# 9 - 12 18 27 36 45
+# 10 - 14 19 23 28 37 46
+# 11 - 110 29 38 47 56
+# 12 - 12 13 15 111 24 210 39 48 57
+# 13 - 112 211 310 49 58 67
+# 14 - 16 113 25 212 34 311 410 59 68
+# 15 - 12 14 114 23 213 312 411 510 69 78
+# 16 - 13 17 115 26 214 35 313 412 511 610 79
+# 17 - 116 215 314 413 512 611 710 89
+# 18 - 12 15 18 117 24 27 216 36 315 45 414 513 612 711 810
+# 19 - 118 217 316 415 514 613 712 811 910
+# 20 - 13 14 19 119 23 28 218 37 317 46 416 515 614 713 812 911
