@@ -1,6 +1,6 @@
 import random
 
-first_field = 20#random.randint(3, 20)
+first_field = random.randint(3, 20)
 second_field = []
 
 for i in range(1, first_field):
